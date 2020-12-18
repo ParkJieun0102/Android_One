@@ -2,6 +2,7 @@ package com.android.android_one;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    String TAG = "Main";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
         backBtn = findViewById(R.id.genderBtn);
         calcBtn = findViewById(R.id.calcBtn);
 
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("gender");
+        Log.v(TAG, str);
 
-        String gender = "men"; // +++++++++++++++++++++++++++++++++++
-        switch (gender){
+        switch (intent.getStringExtra("gender")){
             case "women":
                 weight.setText("53");
                 height.setText("161");
@@ -67,9 +72,10 @@ public class MainActivity extends AppCompatActivity {
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.android.bmi2_calculate.MainActivity.this, ResultActivity.class);
+                Intent intent = new Intent(com.android.android_one.MainActivity.this, ResultActivity.class);
                 intent.putExtra("height", Integer.parseInt(height.getText().toString()));
                 intent.putExtra("weight", Integer.parseInt(weight.getText().toString()));
+                intent.putExtra("gender", intent.getStringExtra("gender"));
                 startActivity(intent);
             }
         });
@@ -106,16 +112,16 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()){
             case R.id.BMIformula:
-                final LinearLayout linear = (LinearLayout) View.inflate(com.android.bmi2_calculate.MainActivity.this, R.layout.bmi_formula, null);
-                new AlertDialog.Builder(com.android.bmi2_calculate.MainActivity.this)
+                final LinearLayout linear = (LinearLayout) View.inflate(com.android.android_one.MainActivity.this, R.layout.bmi_formula, null);
+                new AlertDialog.Builder(com.android.android_one.MainActivity.this)
                         .setTitle("BMI 공식")
                         .setIcon(R.mipmap.ic_launcher_round)
                         .setView(linear)
                         .show();
                 break;
             case R.id.BMIinfo:
-                final LinearLayout linear1 = (LinearLayout) View.inflate(com.android.bmi2_calculate.MainActivity.this, R.layout.bmi_info, null);
-                new AlertDialog.Builder(com.android.bmi2_calculate.MainActivity.this)
+                final LinearLayout linear1 = (LinearLayout) View.inflate(com.android.android_one.MainActivity.this, R.layout.bmi_info, null);
+                new AlertDialog.Builder(com.android.android_one.MainActivity.this)
                         .setTitle("BMI 정보")
                         .setIcon(R.mipmap.ic_launcher_round)
                         .setView(linear1)

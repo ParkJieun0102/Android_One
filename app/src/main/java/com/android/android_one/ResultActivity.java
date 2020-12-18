@@ -19,6 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     Button backspaceBtn;
     Button tipBtn;
 
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +74,29 @@ public class ResultActivity extends AppCompatActivity {
             img4.setVisibility(View.VISIBLE);
 
         }
+
+        backspaceBtn = findViewById(R.id.backspaceBtn);
+        tipBtn = findViewById(R.id.tipBtn);
+
+        backspaceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(com.android.android_one.ResultActivity.this, MainActivity.class); // from ~ to
+                intent.putExtra("gender", intent.getStringExtra("gender"));
+                startActivity(intent);
+            }
+        });
+
+        tipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(com.android.android_one.ResultActivity.this, MainActivity3.class); // from ~ to
+                intent.putExtra("gender", intent.getStringExtra("gender"));
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 

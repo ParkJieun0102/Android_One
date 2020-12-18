@@ -28,14 +28,14 @@ public class SecondActivity extends Activity {
             Intent intent = null;
             switch (v.getId()){
                 case R.id.genderW_second:
-                    intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                    intent = new Intent(SecondActivity.this, MainActivity.class);
                     intent.putExtra("gender", "women");
 
                     startActivity(intent);
                     break;
 
                 case R.id.genderM_second:
-                    intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                    intent = new Intent(SecondActivity.this, MainActivity.class);
                     intent.putExtra("gender", "men");
 
                     startActivity(intent);

@@ -1,10 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.android.android_one.MainActivity">
+    tools:context="com.android.bmi2_calculate.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/BMIinfo"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="BMI 기초 지식"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/BMIformula"
+        android:title="BMI 공식"
+        />
 </menu>
