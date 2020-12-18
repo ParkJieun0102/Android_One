@@ -9,14 +9,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Android_one.AppBarOverlay">
+        android:theme="@style/Theme.BMI2_Calculate.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.Android_one.PopupOverlay" />
+            app:popupTheme="@style/Theme.BMI2_Calculate.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

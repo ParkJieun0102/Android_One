@@ -6,10 +6,98 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:background="#5656FB"
+            android:hint="나이(age)"
+            android:textColorHint="#ffffff"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:gravity="center"
+            />
 
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:background="#7474EF"
+            android:hint="몸무게(kg)"
+            android:textColorHint="#ffffff"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:gravity="center|right"
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="kg"
+            android:gravity="center|left"
+            android:background="#7474EF"
+            android:textColor="#ffffff"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ckwhdgks"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="키(cm)"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:gravity="center|right"
+            android:background="#DF00FFF6"
+
+            />
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="kg"
+            android:gravity="center|left"
+            android:background="#DF00FFF6"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/genderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뒤로가기"
+            />
+        <Button
+            android:id="@+id/calcBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            />
+
+    </LinearLayout>
+
 </LinearLayout>
