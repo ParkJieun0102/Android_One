@@ -83,15 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
 
@@ -115,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 final LinearLayout linear = (LinearLayout) View.inflate(com.android.android_one.MainActivity.this, R.layout.bmi_formula, null);
                 new AlertDialog.Builder(com.android.android_one.MainActivity.this)
                         .setTitle("BMI 공식")
-                        .setIcon(R.mipmap.ic_launcher_round)
+                        .setIcon(R.mipmap.bmi)
                         .setView(linear)
                         .show();
                 break;
@@ -123,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 final LinearLayout linear1 = (LinearLayout) View.inflate(com.android.android_one.MainActivity.this, R.layout.bmi_info, null);
                 new AlertDialog.Builder(com.android.android_one.MainActivity.this)
                         .setTitle("BMI 정보")
-                        .setIcon(R.mipmap.ic_launcher_round)
+                        .setIcon(R.mipmap.bmi)
                         .setView(linear1)
                         .show();
                 break;

@@ -4,9 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EB009E79"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:orientation="horizontal"
@@ -15,25 +17,31 @@
         <EditText
             android:id="@+id/age"
             android:layout_width="0px"
+            android:textSize="25dp"
+            android:textStyle="bold"
             android:layout_height="match_parent"
-            android:background="#5656FB"
+            android:background="#005A52"
             android:hint="나이(age)"
             android:textColorHint="#ffffff"
             android:layout_weight="2"
             android:inputType="number"
             android:selectAllOnFocus="true"
             android:gravity="center"
+            android:layout_marginRight="10dp"
             />
 
         <EditText
+            android:layout_marginLeft="10dp"
             android:id="@+id/weight"
             android:layout_width="0px"
             android:layout_height="match_parent"
-            android:background="#7474EF"
-            android:hint="몸무게(kg)"
+            android:background="#005A52"
+            android:hint="몸무게 "
             android:textColorHint="#ffffff"
             android:layout_weight="1"
             android:inputType="number"
+            android:textSize="25dp"
+            android:textStyle="bold"
             android:selectAllOnFocus="true"
             android:gravity="center|right"
             />
@@ -42,14 +50,17 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="kg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             android:gravity="center|left"
-            android:background="#7474EF"
+            android:background="#005A52"
             android:textColor="#ffffff"
             />
 
     </LinearLayout>
 
     <LinearLayout
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1"
@@ -60,20 +71,26 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="키(cm)"
+            android:hint="키  "
             android:inputType="number"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColorHint="@color/white"
             android:selectAllOnFocus="true"
             android:gravity="center|right"
-            android:background="#DF00FFF6"
+            android:background="#005A52"
 
             />
         <TextView
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="kg"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="cm"
             android:gravity="center|left"
-            android:background="#DF00FFF6"
+            android:background="#005A52"
             />
 
     </LinearLayout>
@@ -90,11 +107,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="뒤로가기"
+            android:layout_marginRight="10dp"
             />
         <Button
             android:id="@+id/calcBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="Calculate"
             />
 
