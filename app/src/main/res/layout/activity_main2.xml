@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#EB009E79"
+    tools:context=".MainActivity2">
+    <TextView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Copyright ⓒ 1조 : 박세미, 박지은, 이강후, 차종한"
+        />
+    <ImageView
+        android:layout_weight="2"
+        android:id="@+id/main_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:padding="10dp"
+        android:adjustViewBounds="true"
+        />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        >
+    <Button
+        android:id="@+id/main_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI 시작하기"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:backgroundTint="#FFB800"
+        />
+    </LinearLayout>
+</LinearLayout>
