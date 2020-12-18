@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +13,21 @@ public class MainActivity3 extends AppCompatActivity {
 
     VideoView vv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main3);
+
+
+
+
+
+
+
+
+
+
 
         // 영상 --------------------------------
 
@@ -27,13 +39,22 @@ public class MainActivity3 extends AppCompatActivity {
         Intent intent = getIntent();
         String status = intent.getStringExtra("status");
 
+        int calory = intent.getIntExtra("calory", 0);
+
+        TextView tv_calory = findViewById(R.id.tv_calory);
+        tv_calory.setText("현재 본인의 하루열량은" + calory + "kcal 입니다.\n500kcal를 뺀 " + (calory - 500) + "kcal를 목표로 체중을 관리해보세요. \n");
+
+
+
+
+
 
         switch (status){
             case "low":
             videoUri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.thin);
             break;
             case "normal":
-                //videoUri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw);
+                videoUri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.normal);
                 break;
             case "heavy":
                 videoUri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.fat);

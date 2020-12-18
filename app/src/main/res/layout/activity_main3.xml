@@ -12,20 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         >
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_img"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="17dp"
-        android:layout_margin="70px"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:src="@drawable/bmi"
-            android:layout_gravity="center"
-            />
-    </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView
@@ -36,11 +22,10 @@
         android:layout_margin="70px"
         >
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_calory"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:padding="80px"
-            android:text="이게 맞는걸까이게 맞는걸까이게 맞는걸까이게 맞는걸까이게 맞는걸까이게  맞는걸까이게 맞는걸까이게
-                          맞는걸까이게 맞는걸까이게 맞는걸까이게 맞는걸까이게  맞는걸까이게 맞는걸까이게맞는걸까이게 "
             android:visibility="visible"
             />
     </androidx.cardview.widget.CardView>
@@ -56,7 +41,6 @@
             android:id="@+id/vv"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:text="이게 맞는걸까이게 맞는걸까이게 맞는걸까이"
             />
     </androidx.cardview.widget.CardView>
 

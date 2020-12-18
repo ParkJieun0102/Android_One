@@ -11,9 +11,9 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        >
+        android:layout_height="65dp"
+        android:layout_weight="1">
+
         <ImageView
             android:id="@+id/normal"
             android:layout_width="wrap_content"
@@ -22,27 +22,27 @@
             android:visibility="visible"
 
             />
+
         <ImageView
             android:id="@+id/light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/light"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
         <ImageView
             android:id="@+id/heavy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/heavy"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
         <ImageView
             android:id="@+id/veryHeavy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/veryheavy"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
 
     </FrameLayout>
 
@@ -51,6 +51,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#ff0000"
         />
     <Button
         android:id="@+id/backspaceBtn"
