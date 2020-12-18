@@ -21,6 +21,7 @@ public class ResultActivity extends AppCompatActivity {
 
     Intent intent;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +46,14 @@ public class ResultActivity extends AppCompatActivity {
 
         if (result1 < 18.5) {
             text.setText("당신의 BMI 지수는 " + result + " 입니다.\n현재 본인의 하루열량은" + normalWeight + "kcal 입니다.\n500kcal를 뺀 " + (normalWeight - 500) + "kcal를 목표로 체중을 관리해보세요. \n");
-
+            status = "low";
             img1.setVisibility(View.INVISIBLE);
             img2.setVisibility(View.VISIBLE);
             img3.setVisibility(View.INVISIBLE);
             img4.setVisibility(View.INVISIBLE);
         } else if (18.5 <= result1 && result1 < 23) {
             text.setText("당신의 BMI 지수는 " + result + " 입니다.\n현재 본인의 하루열량은" + normalWeight + "kcal 입니다.\n500kcal를 뺀 " + (normalWeight - 500) + "kcal를 목표로 체중을 관리해보세요. \n");
-
+            status = "normal";
             img1.setVisibility(View.VISIBLE);
             img2.setVisibility(View.INVISIBLE);
             img3.setVisibility(View.INVISIBLE);
@@ -61,12 +62,15 @@ public class ResultActivity extends AppCompatActivity {
         } else if (23 <= result1 && result1 < 25) {
             text.setText("당신의 BMI 지수는 " + result + " 입니다.\n현재 본인의 하루열량은" + normalWeight + "kcal 입니다.\n500kcal를 뺀 " + (normalWeight - 500) + "kcal를 목표로 체중을 관리해보세요. \n");
 
+            status = "heavy";
             img1.setVisibility(View.INVISIBLE);
             img2.setVisibility(View.INVISIBLE);
             img3.setVisibility(View.VISIBLE);
             img4.setVisibility(View.INVISIBLE);
 
         } else if (25 < result1) {
+
+            status = "veryheavy";
             text.setText("당신의 BMI 지수는 " + result + " 입니다.\n현재 본인의 하루열량은" + normalWeight + "kcal 입니다.\n500kcal를 뺀 " + (normalWeight - 500) + "kcal를 목표로 체중을 관리해보세요. \n");
             img1.setVisibility(View.INVISIBLE);
             img2.setVisibility(View.INVISIBLE);
@@ -90,8 +94,10 @@ public class ResultActivity extends AppCompatActivity {
         tipBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(com.android.android_one.ResultActivity.this, MainActivity3.class); // from ~ to
-                intent.putExtra("gender", intent.getStringExtra("gender"));
+               Intent intent = new Intent(com.android.android_one.ResultActivity.this, MainActivity3.class); // from ~ to
+                intent.putExtra("status", status);
+//                intent.putExtra("calory", intent.getStringExtra("gender"));
+
                 startActivity(intent);
             }
         });
